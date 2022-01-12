@@ -2,16 +2,7 @@
 
 @section('body')
     <div class="container">
-        <h4>Empleados</h4>
-        <a href="{{ route('employees.create') }}">Nuevo empleado</a>
-
-        <p>Busqueda por cargo</p>
-        <input class="form-control mr-sm-2" id="cargo" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" onClick="queryforcargo();">Buscar por cargo</button>
-        <p>Busqueda por area</p>
-        <input class="form-control mr-sm-2" id="area" placeholder="Search">
-
-        <button class="btn btn-outline-success my-2 my-sm-0" onClick="queryforarea();">Buscar por area</button>
+        <h4>Contratos</h4>
         <table class="table thead-dark">
             <thead>
                 <tr>
