@@ -24,6 +24,7 @@ Route::delete('employees/{employee}/totalDelete','EmployeController@forceDelete'
 
 Route::get('/{employee}/contrato','ContractController@create')->name('contract.create');
 Route::post('/contrato/{employee}','ContractController@store')->name('contract.store');
+Route::get('/contrato','ContractController@index')->name('contract.index');
 
 Route::get('/queryforarea','EmployeController@queryforarea')->name('queryforarea');
 Route::get('/queryforcargo','EmployeController@queryforcargo')->name('queryforcargo');

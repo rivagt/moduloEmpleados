@@ -10,40 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Home
+                    <a class="nav-link" href="{{ route('contract.index') }}">
+                        Contratos
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Portfolio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        {{ __('Contact') }}
-                    </a>
-                </li>
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            {{ __('Login') }}
-                        </a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            onclick="event.preventDefault();
-                                                                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </li>
-                @endguest
             </ul>
         </div>
     </div>
