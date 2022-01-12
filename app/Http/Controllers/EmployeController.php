@@ -10,15 +10,14 @@ class EmployeController extends Controller
 {
     public function index()
     {
-        $employees = Employe::with('position')->latest()->paginate();
+        $employees = Employe::latest()->paginate();
         $deletedEmployees = Employe::onlyTrashed()->get();
         return view('home',compact('employees','deletedEmployees'));
     }
     public function create()
     {
-        $positions = Position::all();
         // return $positions;
-        return view('employees.create',compact('positions'));
+        return view('employees.create');
     }
     public function store(EmployeeRequest $request)
     {
@@ -61,13 +60,13 @@ class EmployeController extends Controller
     public function queryforarea()
     {
         $arg2 = request('area');
-        $employees = Employe::where('area','=',$arg2)->with('position')->latest()->paginate();
+        $employees = Employe::where('area','=',$arg2)->latest()->paginate();
         return $employees;
     }
     public function queryforcargo()
     {
         $arg1 = request('cargo');
-        $employees = Employe::where('cargo','=',$arg1)->with('position')->latest()->paginate();
+        $employees = Employe::where('cargo','=',$arg1)->latest()->paginate();
         return $employees;
     }
 }

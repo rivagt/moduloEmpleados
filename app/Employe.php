@@ -17,8 +17,8 @@ class Employe extends Model
         return 'dni';
     }
 
-    public function position()
-    {
-        return $this->belongsTo(Position::class);
-    }
+    // public function position()
+    // {
+    //     return $this->belongsTo(Position::class);
+    // }
 }

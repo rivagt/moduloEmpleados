@@ -13,12 +13,7 @@ class AddRelationsToEmployes extends Migration
      */
     public function up()
     {
-        // Schema::table('employes', function (Blueprint $table) {
-        //     $table->unsignedBigInteger('position_id')->nullable()->after('id');
-        //     $table->foreign('position_id')->references('id')->on('positions')
-        //     ->onUpdate('cascade')
-        //     ->onDelete('set null');
-        // });
+
         Schema::table('contracts', function (Blueprint $table) {
             $table->unsignedBigInteger('employe_id')->nullable()->after('id');
             $table->foreign('employe_id')->references('id')->on('employes')
